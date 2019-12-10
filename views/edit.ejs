@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title><%= title %></title>
+</head>
+<body>
+        <%- include ('menu.ejs'); %>  
+        <h3 class="text-center">Редактирование данных</h3>
+        <br>
+        <div class="container">
+        <form action="/edit" method="POST"> 
+            <input type="hidden" name="id" value="<%= id %>"><br>
+            <label>Имя</label>
+            <input type="text" name="name" value="<%= name  %>" require>
+            <label>Возраст</label>
+            <input type="number" name="age" value="<%= age %>" require><br>
+            <label>Дата изменения<%= " " + now %></label><br>
+            <input type="submit" value="сохранить">
+        </form>
+        </div>
+</body>
+</html>

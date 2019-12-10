@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <style>
+            #inn {
+            width: 180px; /* Ширина поля в пикселах */
+            } 
+    </style>
+</head>
+<body>
+        <%- include ('menu.ejs'); %>
+        <nav class="container">
+            <div>
+        <h4 class="text-center">Добавление данных в БД</h4>
+            </br>
+        <form class="text-center" method="POST">
+            <label>Текущая  дата</label><br>
+            <label><%= now %></label></br>
+            <label>Укажите имя</label><br>
+            <input size="20" type="text" name="name" placeholder="введите имя в поле" required></br>
+            <label>Укажите возраст</label><br>
+            <input id="inn" type="number" name="inn" min="1" max="99" placeholder="введите возраст" required><br>
+            <br>
+            <input type="submit" value="добавить">
+        </form>
+            </div>
+        </nav>        
+</body>
+</html>
